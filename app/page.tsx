@@ -11,29 +11,26 @@ const socialLinks = [
 
 const featuredProjects = [
   {
-    title: "Immersive Reconstruction Project",
-    summary:
-      "A placeholder project card ready for your first demo video, GitHub repository, and short research-oriented explanation.",
-    stack: ["3D Reconstruction", "XR", "Real-Time Systems"],
-    videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
+    title: "Avatar-Driven Interactive Experience",
+    summary: "",
+    stack: ["AR/VR", "Avatar Interaction", "Unity or WebXR"],
+    demoLabel: "Demo coming soon",
     projectUrl: "#",
     repoUrl: "#",
   },
   {
-    title: "Avatar-Driven Interactive Experience",
-    summary:
-      "Use this slot for a project focused on avatars, interaction design, or an AR/VR prototype with a short recorded demo.",
-    stack: ["AR/VR", "Avatar Interaction", "Unity or WebXR"],
-    videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
+    title: "3D Reconstruction of Room with 3D Gaussian Splatting and Exploring in VR",
+    summary: "",
+    stack: ["3D Reconstruction", "XR", "Real-Time Systems"],
+    demoLabel: "Demo coming soon",
     projectUrl: "#",
     repoUrl: "#",
   },
   {
     title: "Augmented Reality Game Prototype",
-    summary:
-      "Highlight a game or intelligent interactive system here, with links to a live demo, repository, or a case study page.",
+    summary: "",
     stack: ["AR Games", "Computer Vision", "Interactive Systems"],
-    videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
+    demoLabel: "Demo coming soon",
     projectUrl: "#",
     repoUrl: "#",
   },
@@ -90,19 +87,8 @@ export default function Home() {
               </a>
             ))}
           </div>
+          <p className="status-note">Portfolio in progress ...</p>
         </div>
-
-        <aside className="hero-card">
-          <p className="card-label">Focus Areas</p>
-          <ul>
-            <li>3D Reconstruction</li>
-            <li>Gaussian Splatting</li>
-            <li>AR/VR and XR Systems</li>
-            <li>3D Computer Vision</li>
-            <li>Avatar-Driven Interaction</li>
-            <li>Augmented Reality Games</li>
-          </ul>
-        </aside>
       </section>
 
       <section className="section">
@@ -114,18 +100,10 @@ export default function Home() {
         <div className="project-grid">
           {featuredProjects.map((project) => (
             <article className="project-card" key={project.title}>
-              <div className="video-frame">
-                <iframe
-                  src={project.videoUrl}
-                  title={`${project.title} demo video`}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                />
-              </div>
               <div className="project-body">
                 <h3>{project.title}</h3>
-                <p>{project.summary}</p>
+                {project.summary ? <p>{project.summary}</p> : null}
+                <p className="demo-note">{project.demoLabel}</p>
                 <div className="tag-row">
                   {project.stack.map((item) => (
                     <span key={item}>{item}</span>
@@ -138,13 +116,6 @@ export default function Home() {
               </div>
             </article>
           ))}
-        </div>
-      </section>
-
-      <section className="section split">
-        <div>
-          <p className="eyebrow">CV</p>
-          <h2>Academic and project background</h2>
         </div>
       </section>
     </main>
