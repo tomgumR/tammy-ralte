@@ -5,11 +5,7 @@ const socialLinks = [
   },
   {
     label: "GitHub",
-    href: "https://github.com/your-github-username",
-  },
-  {
-    label: "CV",
-    href: "/cv.pdf",
+    href: "https://github.com/tomgumR",
   },
 ];
 
@@ -48,24 +44,34 @@ export default function Home() {
     <main className="page-shell">
       <section className="hero">
         <div className="hero-copy">
-          <p className="eyebrow">Tammy Ralte</p>
-          <h1>
-            Building immersive XR systems through 3D reconstruction, vision,
-            and interactive intelligence.
-          </h1>
+          <p className="nameplate">Tammy Ralte</p>
           <p className="lede">
             I am a PhD candidate at the Indian Institute of Science (IISc),
-            Bangalore, advised by Prof. Pradipta Biswas in the I3D Lab. My
-            research and development interests span 3D reconstruction, AR/VR,
-            3D computer vision, Gaussian Splatting, and intelligent interactive
-            systems.
-          </p>
-          <p className="lede secondary">
-            I am particularly interested in building immersive experiences
-            through real-time reconstruction, avatar-driven interaction, XR
-            systems, and augmented reality games. I previously completed my
-            M.Tech in Augmented Reality and Virtual Reality from the School of
-            AI and Data Science, IIT Jodhpur.
+            Bangalore, advised by{" "}
+            <a
+              className="inline-link"
+              href="https://cambum.net/PB/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Prof. Pradipta Biswas
+            </a>{" "}
+            in the{" "}
+            <a
+              className="inline-link"
+              href="https://cambum.net/I3D.htm"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              I3D Lab
+            </a>
+            . My research and development interests span 3D reconstruction,
+            AR/VR, 3D computer vision, Gaussian Splatting, and intelligent
+            interactive systems. I am particularly interested in building
+            immersive experiences through real-time reconstruction,
+            avatar-driven interaction, XR systems, and augmented reality games.
+            I previously completed my M.Tech in Augmented Reality and Virtual
+            Reality from the School of AI and Data Science, IIT Jodhpur.
           </p>
           <div className="actions">
             {socialLinks.map((link) => (
@@ -103,11 +109,6 @@ export default function Home() {
         <div className="section-heading">
           <p className="eyebrow">Featured Projects</p>
           <h2>Selected work with video demos</h2>
-          <p>
-            Replace the placeholder video IDs and links below with your
-            project-specific content. Using YouTube Unlisted videos keeps the
-            site fast while still letting visitors watch demos in place.
-          </p>
         </div>
 
         <div className="project-grid">
@@ -144,18 +145,6 @@ export default function Home() {
         <div>
           <p className="eyebrow">CV</p>
           <h2>Academic and project background</h2>
-          <p>
-            Add your latest resume as <code>public/cv.pdf</code> so the CV
-            button works immediately on the deployed site.
-          </p>
-        </div>
-        <div className="note-card">
-          <p className="card-label">Deployment Notes</p>
-          <ul>
-            <li>Host demo videos on YouTube as Unlisted and paste embed URLs.</li>
-            <li>Keep PDFs and thumbnails in the repo for easy Vercel deploys.</li>
-            <li>Update the GitHub link once you choose the public profile URL.</li>
-          </ul>
         </div>
       </section>
     </main>
